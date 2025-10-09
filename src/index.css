@@ -253,8 +253,8 @@
 
 @font-face {
     font-family: 'Space Grotesk';
-    src: url('./assets/fonts/Space_grotesk/SpaceGrotesk-Medium.woff2') format('woff2'),
-        url('./assets/fonts/Space_grotesk/SpaceGrotesk-Medium.woff') format('woff');
+    src: url('./assets/fonts/Space_Grotesk/SpaceGrotesk-Medium.woff2') format('woff2'),
+        url('./assets/fonts/Space_Grotesk/SpaceGrotesk-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -262,8 +262,8 @@
 
 @font-face {
     font-family: 'Space Grotesk';
-    src: url('./assets/fonts/Space_grotesk/SpaceGrotesk-Light.woff2') format('woff2'),
-        url('./assets/fonts/Space_grotesk/SpaceGrotesk-Light.woff') format('woff');
+    src: url('./assets/fonts/Space_Grotesk/SpaceGrotesk-Light.woff2') format('woff2'),
+        url('./assets/fonts/Space_Grotesk/SpaceGrotesk-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -271,8 +271,8 @@
 
 @font-face {
     font-family: 'Space Grotesk';
-    src: url('./assets/fonts/Space_grotesk/SpaceGrotesk-Bold.woff2') format('woff2'),
-        url('./assets/fonts/Space_grotesk/SpaceGrotesk-Bold.woff') format('woff');
+    src: url('./assets/fonts/Space_Grotesk/SpaceGrotesk-Bold.woff2') format('woff2'),
+        url('./assets/fonts/Space_Grotesk/SpaceGrotesk-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -280,8 +280,8 @@
 
 @font-face {
     font-family: 'Space Grotesk';
-    src: url('./assets/fonts/Space_grotesk/SpaceGrotesk-Regular.woff2') format('woff2'),
-        url('./assets/fonts/Space_grotesk/SpaceGrotesk-Regular.woff') format('woff');
+    src: url('./assets/fonts/Space_Grotesk/SpaceGrotesk-Regular.woff2') format('woff2'),
+        url('./assets/fonts/Space_Grotesk/SpaceGrotesk-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -289,8 +289,8 @@
 
 @font-face {
     font-family: 'Space Grotesk';
-    src: url('./assets/fonts/Space_grotesk/SpaceGrotesk-SemiBold.woff2') format('woff2'),
-        url('./assets/fonts/Space_grotesk/SpaceGrotesk-SemiBold.woff') format('woff');
+    src: url('./assets/fonts/Space_Grotesk/SpaceGrotesk-SemiBold.woff2') format('woff2'),
+        url('./assets/fonts/Space_Grotesk/SpaceGrotesk-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
