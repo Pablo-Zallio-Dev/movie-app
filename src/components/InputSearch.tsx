@@ -1,18 +1,13 @@
 import loupe from '../assets/icons/zoom.svg'
 import closeInput from '../assets/icons/closeInput.svg'
 
-
 type InputSearchProps = {
     darkMode: boolean
     valueInput: string
     setValueInput: React.Dispatch<React.SetStateAction<string>>
 }
 
-
 function InputSearch({darkMode, valueInput, setValueInput}: InputSearchProps){
-
-    
-
     function displayBtn(e: React.ChangeEvent<HTMLInputElement>) {
         setValueInput(e.target.value)
     }
@@ -20,7 +15,6 @@ function InputSearch({darkMode, valueInput, setValueInput}: InputSearchProps){
     function resetInput() {
         setValueInput('')
     }
-
     return(
         <>
         <section className="flex justify-center py-9">
@@ -33,6 +27,5 @@ function InputSearch({darkMode, valueInput, setValueInput}: InputSearchProps){
         </>
     )
 }
-
 export default InputSearch;
 

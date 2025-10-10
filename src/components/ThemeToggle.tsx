@@ -9,7 +9,6 @@ type ThemeToggleProps = {
 function ThemeToggle({ darkMode, setDarkMode }: ThemeToggleProps) {
 
     function changeTheme() {
-        console.log("Prueba")
         setDarkMode(!darkMode)
     }
 
