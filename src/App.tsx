@@ -10,9 +10,10 @@ function App() {
   const[valueInput, setValueInput] = useState('')
   const[selectGenre, setSelectGente] = useState<string[]>([])
 
+  console.log(darkMode)
   return (
     <>
-      <section className={`container-app bg-gray-100 text-gray-900 ${!darkMode ?'dark:bg-gray-900 p-0 dark:text-amber-50' : ''} font-space`}>
+      <section className={`container-app bg-gray-100 text-gray-900 ${!darkMode ?'bg-gray-900 p-0 dark:text-amber-50' : ''} font-space`}>
         <header className="relative flex items-center justify-between mx-[1rem] sm:mx-[4rem] lg:mx-[12rem]">
           <a href="/* Aqui poner la web */">
             <Logo />
