@@ -1,4 +1,4 @@
-import { useState , useEffect } from "react";
+import { useState } from "react";
 import Logo from "./components/Logo";
 import ThemeToggle from "./components/ThemeToggle";
 import InputSearch from "./components/InputSearch";
@@ -10,13 +10,7 @@ function App() {
   const[valueInput, setValueInput] = useState('')
   const[selectGenre, setSelectGente] = useState<string[]>([])
 
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [darkMode]);
+
 
   console.log(darkMode)
   return (
