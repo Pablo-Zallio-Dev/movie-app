@@ -1,10 +1,14 @@
 import { useState } from "react";
 import Logo from "./components/Logo";
 import ThemeToggle from "./components/ThemeToggle";
+import InputSearch from "./components/InputSearch";
+import FilterBtns from "./components/FilterBtns";
 
 function App() {
 
   const [darkMode, setDarkMode] = useState(false)
+  const[valueInput, setValueInput] = useState('')
+  const[selectGenre, setSelectGente] = useState('')
 
   return (
     <>
@@ -18,6 +22,9 @@ function App() {
         <main>
          <h1 className="pt-10 mx-[3rem] text-center text-[1.25rem] md:text-3xl lg:text-4xl lg:font-bold">Discover Your Next Favorite Film</h1>
          <p className="pt-4 mx-[2rem] text-center text-[.75rem] md:text-[1rem]">Search, explore, and build your personal movie watchlist.</p>
+         <InputSearch darkMode={darkMode} valueInput={valueInput} setValueInput={setValueInput}/>
+         <FilterBtns selectGenre={selectGenre} setSelectGenre={setSelectGente}/>
+         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </main>
       </section>
     </>
