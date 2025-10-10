@@ -15,7 +15,7 @@ function App() {
   console.log(darkMode)
   return (
     <>
-      <section className={`container-app p-0 font-space  ${darkMode ?'bg-gray-100 text-gray-900' : 'dark:bg-gray-900 dark:text-amber-50'} `}>
+      <section className={`container-app p-0 font-space  ${darkMode ?'bg-gray-100 text-gray-900' : 'bg-gray-900 text-amber-50'} `}>
         <header className="relative flex items-center justify-between mx-[1rem] sm:mx-[4rem] lg:mx-[12rem]">
           <a href="/* Aqui poner la web */">
             <Logo />
