@@ -8,7 +8,7 @@ function App() {
 
   const [darkMode, setDarkMode] = useState(false)
   const[valueInput, setValueInput] = useState('')
-  const[selectGenre, setSelectGente] = useState('')
+  const[selectGenre, setSelectGente] = useState<string[]>([])
 
   return (
     <>
@@ -33,10 +33,3 @@ function App() {
 
 export default App;
 
-
-/* 
-
-
-className={`lg:cursor-pointer ${!darkMode ?'opacity-100 transition-opacity duration-75' :'opacity-0 transition-opacity duration-75'}`}
-
-*/

@@ -38,7 +38,6 @@ const handleGenreClick = (genreValue: string) => {
   
   return (
       <>
-    {/* tengo que cambiar el  sm:flex de aqui abajo por lg:flex */}
     <section className="hidden lg:flex justify-center flex-wrap gap-4 mt-6  sm:mx-[4rem] lg:mx-[12rem] 2xl:w-[800px] 2xl:mx-auto">
       {
           genres.map((genre, genreIndex) => (
@@ -63,8 +62,3 @@ const handleGenreClick = (genreValue: string) => {
 }
 
 export default GenreBtns;
-
-
-/* 
-
-<img className='inline w-3.5' src={selectGenre.includes(genre.value) ? verifyIcon : ''} alt="" />*/

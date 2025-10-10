@@ -2,8 +2,8 @@ import GenreBtns from "./GenreBtns";
 import GenreSelect from "./GenreSelect";
 
 type FilterBtnsProps = {
-    selectGenre: string
-    setSelectGenre: React.Dispatch<React.SetStateAction<string>>
+    selectGenre: string[]
+    setSelectGenre: React.Dispatch<React.SetStateAction<string[]>>
 }
 
 function FilterBtns({selectGenre, setSelectGenre}: FilterBtnsProps) {
