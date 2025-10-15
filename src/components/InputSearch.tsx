@@ -5,6 +5,7 @@ type InputSearchProps = {
     darkMode: boolean
     valueInput: string
     setValueInput: React.Dispatch<React.SetStateAction<string>>
+    
 }
 
 function InputSearch({darkMode, valueInput, setValueInput}: InputSearchProps){
@@ -20,7 +21,7 @@ function InputSearch({darkMode, valueInput, setValueInput}: InputSearchProps){
         <section className="flex justify-center py-9">
            <section className={`flex w-[75%] lg:w-[60%] xl:w-[40%] px-2 rounded-full ${ darkMode ?'bg-[#e7e8fa]':'bg-[#3c4096]'}`}>
             <img className='p-3' src={loupe} alt="Loupe image" />
-            <input className={`w-full focus:outline-0 ${darkMode ?'placeholder-[#575f5e]' :''}`} type="text" name="" id="" placeholder='Search by title, year... ' onChange={displayBtn} value={valueInput}/>
+            <input className={`w-full focus:outline-0 ${darkMode ?'placeholder-[#575f5e]' :''}`} type="text" name="" id="" placeholder='Search by title, year... ' onChange={(e) => {displayBtn(e)}} value={valueInput}/>
             <img className={`${valueInput.length > 0 ? 'block' : 'hidden'}`} src={closeInput} alt="Close icon" onClick={resetInput}/>
            </section>
         </section>
@@ -29,3 +30,8 @@ function InputSearch({darkMode, valueInput, setValueInput}: InputSearchProps){
 }
 export default InputSearch;
 
+/*  fc8664c7
+
+    1060375-cineexpl-F69F15B9
+
+*/
