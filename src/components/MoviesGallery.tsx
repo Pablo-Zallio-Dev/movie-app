@@ -56,7 +56,7 @@ function MoviesGallery({ movieNext, movieGallery, darkMode }: MoviesGalleryProp)
 
   return (
     <>
-      <section className="flex flex-col mt-[8rem] ">
+      <section className="flex flex-col mt-[3rem] ">
         <h2 className="mx-[1rem] sm:mx-[4rem] lg:mx-[12rem] text-[1.5rem] font-bold ">Most Populars</h2>
         <section className=" flex justify-center  gap-[.75rem] min-[1200px]:gap-[2.25rem] flex-wrap mx-[1rem] sm:mx-[4rem] lg:mx-[8rem] py-[3rem]">
 
@@ -69,7 +69,7 @@ function MoviesGallery({ movieNext, movieGallery, darkMode }: MoviesGalleryProp)
 
 
           <section
-            className={`relative w-[200px] md:w-[220px] max-w-[220px] lg:max-w-[240px] group rounded-[.5rem]  overflow-hidden ${
+            className={`relative w-[130px] md:w-[220px] max-w-[220px] lg:max-w-[240px] group rounded-[.5rem]  overflow-hidden ${
               darkMode ? "bg-[#F3F4F6]" : "bg-[#3C4096]"
             } `}
             key={movieIndex}
@@ -80,13 +80,20 @@ function MoviesGallery({ movieNext, movieGallery, darkMode }: MoviesGalleryProp)
               alt=""
             />
             <section
-              className={` absolute flex flex-col justify-between gap-1 bottom-0 w-full min-[444px]:h-[20%]  px-[.75rem] py-[.5rem] text-[.8rem]   ${
+              className={` absolute flex flex-col justify-between gap-1 bottom-0 w-full min-[444px]:h-[30%]   px-[.75rem] py-[.5rem] text-[.8rem]   ${
                 darkMode ? "bg-[#e7e8fad9]" : "bg-[#000000a5]"
               } `}
             >
-              <p className={`  `}>
+
+            <p className={` text-[.7rem] block md:hidden `}>
+                {movie.title.length > 10
+                  ? `${movie.title.slice(0, 10)}...`
+                  : `${movie.title}`}
+              </p>
+
+              <p className={` text-[1rem] hidden md:block text-emerald-500 `}>
                 {movie.title.length > 25
-                  ? `${movie.title.slice(0, 22)}...`
+                  ? `${movie.title.slice(0, 25)}...`
                   : `${movie.title}`}
               </p>
               <section className={`flex justify-between py-1`}>
@@ -105,12 +112,12 @@ function MoviesGallery({ movieNext, movieGallery, darkMode }: MoviesGalleryProp)
         ))}
         </section>
       </section>
-       <section className="flex flex-col mt-[8rem] ">
+       <section className="flex flex-col mt-[5rem] ">
         <h2 className="mx-[1rem] sm:mx-[4rem] lg:mx-[12rem] text-[1.5rem] font-bold ">Coming</h2>
         <section className=" flex justify-center  gap-[.75rem] min-[1200px]:gap-[2.25rem] flex-wrap mx-[1rem] sm:mx-[4rem] lg:mx-[8rem] py-[3rem]">
           {movieNexts.map((movie, movieIndex) => (
           <section
-            className={`relative w-[200px] md:w-[220px] max-w-[220px] lg:max-w-[240px] group rounded-[.5rem]  overflow-hidden ${
+            className={`relative w-[130px] md:w-[220px] max-w-[220px] lg:max-w-[240px] group rounded-[.5rem]  overflow-hidden ${
               darkMode ? "bg-[#F3F4F6]" : "bg-[#3C4096]"
             } `}
             key={movieIndex}
@@ -121,13 +128,19 @@ function MoviesGallery({ movieNext, movieGallery, darkMode }: MoviesGalleryProp)
               alt=""
             />
             <section
-              className={` absolute flex flex-col justify-between gap-1 bottom-0 w-full min-[444px]:h-[20%]  px-[.75rem] py-[.5rem] text-[.8rem]   ${
+              className={` absolute flex flex-col justify-between gap-1 bottom-0 w-full min-[444px]:h-[30%]  px-[.75rem] py-[.5rem] text-[.8rem]   ${
                 darkMode ? "bg-[#e7e8fad9]" : "bg-[#000000a5]"
               } `}
             >
-              <p className={`  `}>
-                {movie.title.length > 25
-                  ? `${movie.title.slice(0, 22)}...`
+               <p className={` text-[.7rem] block md:hidden `}>
+                {movie.title.length > 10
+                  ? `${movie.title.slice(0, 10)}...`
+                  : `${movie.title}`}
+              </p>
+
+              <p className={` text-[1rem] hidden md:block text-emerald-500 `}>
+                {movie.title.length > 15
+                  ? `${movie.title.slice(0, 15)}...`
                   : `${movie.title}`}
               </p>
               <section className={`flex justify-between py-1`}>

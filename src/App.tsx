@@ -18,6 +18,15 @@ function App() {
   const [movieResult, setMovieResult] = useState<[]>([]);
 
 
+  /* 
+
+  1*- En movil revisar la distancia entr "most popular" y el input
+  2*- hacer 2 columnas  con las pelis
+  
+  
+  
+  */
+
   useEffect(() => {
     const getMovies = () => {
       const url = `https://api.themoviedb.org/3/movie/popular?language=en-ES&page=1`;
