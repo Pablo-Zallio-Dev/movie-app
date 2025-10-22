@@ -5,27 +5,17 @@ import InputSearch from "./components/InputSearch";
 //import FilterBtns from "./components/FilterBtns";
 //import MovieError from "./components/movieError";
 import MovieSucces from "./components/MovieSucces";
-//import MovieSearch from "./components/MovieSearch";
 import MoviesGallery from "./components/MoviesGallery";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [valueInput, setValueInput] = useState("");
-  //const [selectGenre, setSelectGenre] = useState<number[]>([]);
   const [movieGallery, setMovieGallery] = useState<[]>([]);
   const [movieNext, setMovieNext] = useState<[]>([]);
   const [movieResponse, setMovieResponse] = useState(false);
   const [movieResult, setMovieResult] = useState<[]>([]);
 
 
-  /* 
-
-  1*- En movil revisar la distancia entr "most popular" y el input
-  2*- hacer 2 columnas  con las pelis
-  
-  
-  
-  */
 
   useEffect(() => {
     const getMovies = () => {
@@ -65,6 +55,7 @@ function App() {
   }, []);
 
 
+
   const getResponse = () => {
     const url = `https://api.themoviedb.org/3/search/movie?query=${valueInput}&language=en-ES&page=1`;
     const optionsApi = {
@@ -84,7 +75,7 @@ function App() {
   return (
     <>
       <section
-        className={`container-app p-0 font-space  ${
+        className={`container-app p-0 font-space min-h-screen flex flex-col  ${
           darkMode ? "bg-gray-100 text-gray-900" : "bg-gray-900 text-amber-50"
         } `}
       >
@@ -109,9 +100,8 @@ function App() {
             movieResponse = {movieResponse}
             setMovieResponse={setMovieResponse}
           />
-          {/*  <FilterBtns selectGenre={selectGenre} setSelectGenre={setSelectGenre}/> */}
 
-          {valueInput.length === 0 ? (
+          {!movieResponse ? (
             <MoviesGallery
               darkMode={darkMode}
               movieGallery={movieGallery}
@@ -129,42 +119,3 @@ function App() {
 }
 
 export default App;
-
-/* 
-
-
-
-
-  useEffect(() => { 
-  const searchMovies = async () => {
-
-const optionsApi = {
-  headers: {
-     Authorization:'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlNDk5NGI4ZThlYTM5ZWQ1NzVmYzg0NTBkMzRmYzRjNSIsIm5iZiI6MTc2MDQyNDM5NC44MDQsInN1YiI6IjY4ZWRmMWNhOTIxOTI2N2IzMTlkZjAwOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.oM7C-EZtKj-FAlFjEaED1hkQx4kPAR_vARZsBY1MEgc'
-  } 
-}
-
-const url = `https://api.themoviedb.org/3/movie/popular`;
-
-try {
-   const res = await fetch(url,optionsApi);
-   if (!res.ok) {throw new Error(`HTTP error! status: ${res.status}`)}
-
-   const json = await res.json();
-   setMovieResult(json)
-   console.log(movieResult)
-
-} catch (error) {
-  console.error('Error al cargar la API:', error)
-}
-  };
-
-  searchMovies();
-
-}, [])
-  
- 
-
-
-
-*/
